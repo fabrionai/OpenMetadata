@@ -18,7 +18,7 @@
   top: 12px;
   display: flex;
   flex-direction: column;
-  background: white;
+  background: @fabrion-grey-100;
   border-radius: 10px;
   z-index: 1000;
   border: 1px solid @border-color;
@@ -28,11 +28,16 @@
     width: 44px;
     height: 44px;
     padding: 8px 12px;
+    color: @fabrion-white-100;
 
     &.active,
     &:hover {
-      background-color: @blue-5;
+      background-color: @fabrion-grey-70;
       color: @primary-color;
+    }
+
+    .anticon {
+      color: @fabrion-white-100;
     }
   }
 }

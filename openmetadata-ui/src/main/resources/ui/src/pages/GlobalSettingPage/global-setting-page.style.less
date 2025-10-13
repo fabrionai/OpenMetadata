@@ -11,6 +11,8 @@
  *  limitations under the License.
  */
 
+@import (reference) '../../styles/variables.less';
+
 @icon-color: #515151;
 
 .side-panel-icons {
@@ -18,4 +20,13 @@
 
   height: 16px;
   width: 16px;
+}
+
+.setting-items-container {
+  .global-setting-card {
+    .ant-card {
+      background-color: @fabrion-grey-100;
+      border-color: @fabrion-grey-70;
+    }
+  }
 }

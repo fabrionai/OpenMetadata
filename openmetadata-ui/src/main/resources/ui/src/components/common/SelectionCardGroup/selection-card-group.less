@@ -19,11 +19,11 @@
 
   .selection-card {
     flex: 1;
-    border: 1px solid @grey-300;
+    border: 1px solid @fabrion-grey-70;
     border-radius: @border-rad-xs;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: @white;
+    background: @fabrion-grey-100;
 
     .ant-card-body {
       padding: @size-md;
@@ -40,15 +40,15 @@
           width: 40px;
           height: 40px;
           border-radius: 50%;
-          background-color: @grey-100;
-          border: 6px solid @grey-50;
+          background-color: @fabrion-grey-70;
+          border: 6px solid @fabrion-grey-100;
           transition: all 0.3s ease;
           flex-shrink: 0;
 
           svg {
             width: @size-md;
             height: @size-md;
-            color: @grey-600;
+            color: @fabrion-white-100;
           }
         }
 
@@ -57,14 +57,14 @@
         }
 
         .selection-title {
-          color: @grey-700;
+          color: @fabrion-white-100;
           font-weight: @font-semibold;
           line-height: 1.4;
           margin-bottom: @size-xxs;
         }
 
         .selection-description {
-          color: @grey-600;
+          color: @fabrion-grey-20;
           line-height: 1.4;
         }
 
@@ -80,8 +80,8 @@
           transition: all 0.3s ease;
 
           &.unchecked {
-            border: 1px solid @grey-300;
-            background-color: @white;
+            border: 1px solid @fabrion-grey-70;
+            background-color: @fabrion-grey-100;
           }
 
           &.checked {
@@ -101,25 +101,25 @@
     // Selected state styles
     &.selected,
     &:hover {
-      border-color: @primary-3;
-      background-color: @primary-50;
+      border-color: @primary-color;
+      background-color: @fabrion-grey-70;
 
       .selection-content {
         .selection-icon {
-          background-color: @primary-1;
-          border: 6px solid @primary-50;
+          background-color: @fabrion-grey-100;
+          border: 6px solid @fabrion-grey-70;
 
           svg {
-            color: @primary-6;
+            color: @primary-color;
           }
         }
 
         .selection-title {
-          color: @primary-8;
+          color: @fabrion-white-100;
         }
 
         .selection-description {
-          color: @primary-6;
+          color: @fabrion-grey-20;
         }
 
         .custom-radio.unchecked {
@@ -135,28 +135,28 @@
       pointer-events: none;
 
       &:hover {
-        border-color: @grey-300;
-        background-color: @grey-50;
+        border-color: @fabrion-grey-70;
+        background-color: @fabrion-grey-100;
 
         .selection-content {
           .selection-icon {
-            background-color: @grey-100;
+            background-color: @fabrion-grey-70;
 
             svg {
-              color: @grey-500;
+              color: @fabrion-grey-40;
             }
           }
 
           .selection-title {
-            color: @grey-800;
+            color: @fabrion-grey-20;
           }
 
           .selection-description {
-            color: @grey-400;
+            color: @fabrion-grey-40;
           }
 
           .custom-radio.unchecked {
-            border-color: @grey-300;
+            border-color: @fabrion-grey-70;
           }
         }
       }

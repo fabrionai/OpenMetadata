@@ -69,28 +69,52 @@
   }
 }
 
+.bg-white.domain-selector,
+.domain-selector.bg-white {
+  background-color: @fabrion-grey-100 !important;
+  border: 1px solid @fabrion-grey-70 !important;
+  color: @fabrion-white-100 !important;
+
+  .ant-typography {
+    color: @fabrion-white-100 !important;
+  }
+
+  svg {
+    color: @fabrion-white-100 !important;
+  }
+}
+
+button.ant-btn.domain-nav-btn,
 .ant-btn.domain-nav-btn {
-  background-color: @white;
-  border: 1px solid @grey-15;
-  color: @text-color;
+  background-color: @fabrion-grey-100 !important;
+  border: 1px solid @fabrion-grey-70 !important;
+  color: @fabrion-white-100 !important;
   height: 40px;
 
   .domain-text {
     max-width: 15vw;
-    color: inherit;
+    color: inherit !important;
+  }
+
+  .ant-typography {
+    color: @fabrion-white-100 !important;
+  }
+
+  svg {
+    color: @fabrion-white-100 !important;
   }
 
   &:hover,
   &:focus {
-    background-color: @primary-button-background;
-    border: 1px solid @alert-info-icon-bg-1;
-    color: @text-color;
+    background-color: @fabrion-grey-70 !important;
+    border: 1px solid @fabrion-grey-70 !important;
+    color: @fabrion-white-100 !important;
   }
 
   &.domain-active {
-    color: @primary-color;
-    border: 1px solid @primary-color;
-    background-color: @primary-button-background;
+    color: @primary-color !important;
+    border: 1px solid @primary-color !important;
+    background-color: @fabrion-grey-100 !important;
   }
 }
 

@@ -18,7 +18,7 @@ export const observerOptions = {
 };
 
 export const DEFAULT_HEADER_BG_COLOR =
-  'linear-gradient(221.19deg, #0017E4 -17.4%, #3793FF 112.31%)';
+  'linear-gradient(221.19deg, #313131 -17.4%, #313131 112.31%)';
 
 export const headerBackgroundColors = [
   {

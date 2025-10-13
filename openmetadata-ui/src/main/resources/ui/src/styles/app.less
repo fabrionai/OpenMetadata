@@ -22,6 +22,150 @@ body {
   font-feature-settings: normal !important;
 }
 
+// Dark scrollbar styling
+* {
+  // Firefox
+  scrollbar-width: thin;
+  scrollbar-color: @fabrion-grey-70 @fabrion-grey-100;
+}
+
+// Webkit browsers (Chrome, Safari, Edge)
+*::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-track {
+  background: @fabrion-grey-100;
+  border-radius: 100px !important;
+  margin: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: @fabrion-grey-70;
+  border-radius: 100px !important;
+  border: 3px solid @fabrion-grey-100;
+  background-clip: padding-box;
+
+  &:hover {
+    background-color: @fabrion-grey-40;
+  }
+}
+
+*::-webkit-scrollbar-corner {
+  background: @fabrion-grey-100;
+}
+
+// Completely hide scrollbar buttons (arrows) to prevent square edges
+*::-webkit-scrollbar-button {
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+*::-webkit-scrollbar-button:start:decrement,
+*::-webkit-scrollbar-button:end:increment {
+  display: none !important;
+}
+
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-select-selector,
+.ant-picker,
+textarea.ant-input,
+.ant-input-number,
+.ant-input-search {
+  background-color: @fabrion-grey-100 !important;
+  color: @fabrion-white-100 !important;
+  border-color: @fabrion-grey-70 !important;
+
+  &::placeholder {
+    color: #aaaaaa !important;
+  }
+
+  input {
+    background-color: @fabrion-grey-100 !important;
+    color: @fabrion-white-100 !important;
+
+    &::placeholder {
+      color: #aaaaaa !important;
+    }
+  }
+
+  &:hover {
+    border-color: #666666 !important;
+  }
+
+  &:focus,
+  &.ant-input-focused {
+    background-color: @fabrion-grey-100 !important;
+    border-color: @primary-color !important;
+  }
+}
+
+.ant-select-dropdown {
+  background-color: @fabrion-grey-100 !important;
+
+  .ant-select-item {
+    color: @fabrion-red-100 !important;
+
+    &:hover {
+      background-color: @fabrion-grey-70 !important;
+    }
+
+    &.ant-select-item-option-selected {
+      background-color: @fabrion-grey-70 !important;
+    }
+  }
+}
+
+.ant-popover {
+  .ant-popover-inner {
+    background-color: @fabrion-grey-100;
+    border: 1px solid @fabrion-grey-70;
+
+    .ant-popover-inner-content {
+      color: @fabrion-red-100;
+    }
+  }
+
+  .ant-popover-arrow {
+    &::before {
+      background: @fabrion-grey-100;
+      border: 1px solid @fabrion-grey-70;
+    }
+    &::after {
+      background: @fabrion-grey-100;
+    }
+  }
+}
+
+.ant-btn {
+  &.ant-btn-default {
+    background-color: @fabrion-grey-100 !important;
+    border-color: @fabrion-grey-70 !important;
+    color: @fabrion-white-100 !important;
+
+    &:hover {
+      background-color: @fabrion-grey-70 !important;
+      border-color: @fabrion-grey-70 !important;
+      color: @fabrion-white-100 !important;
+    }
+
+    &:focus {
+      background-color: @fabrion-grey-100 !important;
+      border-color: @primary-color !important;
+      color: @fabrion-white-100 !important;
+    }
+    &:selected {
+      background-color: @fabrion-grey-100 !important;
+      border-color: @fabrion-grey-70 !important;
+      color: @fabrion-white-100 !important;
+    }
+  }
+}
+
 .main-container {
   display: flex;
   height: 100vh;
@@ -298,7 +442,7 @@ a[href].link-text-grey,
 }
 
 .bg-white {
-  background-color: @white;
+  background-color: @fabrion-grey-70;
 }
 
 .bg-transparent {
@@ -322,7 +466,7 @@ a[href].link-text-grey,
 }
 
 .bg-grey {
-  background-color: @grey-9;
+  background-color: transparent;
 }
 
 .bg-grey-1 {
@@ -990,5 +1134,742 @@ a[href].link-text-grey,
     fill: none;
     height: @size-lg;
     width: @size-lg;
+  }
+}
+
+// Empty state styling
+.ant-empty {
+  background-color: transparent !important;
+
+  .ant-empty-description {
+    color: @fabrion-white-100;
+  }
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+// Ensure Row and Col don't have white backgrounds
+.ant-row,
+.ant-col {
+  background-color: transparent !important;
+}
+
+// Table container rows should be dark
+.table-container {
+  .ant-row,
+  .ant-col {
+    background-color: transparent !important;
+  }
+}
+
+// Page containers should have dark background
+.page-container,
+.p-b-md {
+  background-color: transparent !important;
+}
+
+// Ensure all content areas are dark
+.content-wrapper {
+  background-color: @background-primary !important;
+}
+
+main,
+#main-content {
+  background-color: @background-primary !important;
+}
+
+// Override any white backgrounds in the layout
+body,
+html,
+#root {
+  background-color: @background-primary !important;
+}
+
+// Ensure gutter spacing doesn't show white
+.ant-row[class*='gutter'],
+.ant-row.p-b-md {
+  background-color: transparent !important;
+
+  > .ant-col {
+    background-color: transparent !important;
+  }
+}
+
+// Table wrapper should not have white background
+.table-container-wrapper,
+div[class*='table'] {
+  background-color: transparent !important;
+}
+
+// Specific fix for page layout rows with table containers
+[data-testid='page-layout-v1'] {
+  .ant-row.p-b-md {
+    background-color: transparent !important;
+
+    .ant-col-24 {
+      background-color: transparent !important;
+    }
+  }
+}
+
+// Disable table row hover - keep same background color
+.ant-table-tbody > tr.ant-table-row:hover > td,
+.ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  background-color: @fabrion-grey-70 !important;
+}
+
+// Also target Ant Design's hover class
+.ant-table-wrapper .ant-table-tbody > tr.ant-table-row-hover > td,
+.ant-table-wrapper .ant-table-tbody > tr:hover > td {
+  background-color: @fabrion-grey-70 !important;
+}
+
+// Ensure error placeholders don't have white backgrounds on hover
+.error-placeholder,
+[class*='ErrorPlaceHolder'],
+[class*='error-place'] {
+  background-color: transparent !important;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+// Ensure table container always stays grey-100
+.table-container,
+.table-container:hover {
+  background-color: @fabrion-grey-100 !important;
+}
+
+// Direct children of table container (Row/Col) should be grey-100
+.table-container > .ant-row,
+.table-container > .ant-row:hover,
+.table-container > div,
+.table-container > div:hover {
+  background-color: @fabrion-grey-100 !important;
+}
+
+// Empty state and wrapper divs stay grey-100
+.table-container .ant-table-wrapper:hover,
+.table-container .ant-empty-normal:hover {
+  background-color: @fabrion-grey-100 !important;
+}
+
+// Form labels should be white
+.ant-form-item-label > label {
+  color: @fabrion-white-100 !important;
+}
+
+// Form label text and descriptions
+.ant-form-item-label,
+label.ant-form-item-required {
+  color: @fabrion-white-100 !important;
+}
+
+// Typography titles and text should be white
+.ant-typography {
+  color: @fabrion-white-100 !important;
+}
+
+.ant-typography.ant-typography-secondary {
+  color: @fabrion-grey-20 !important;
+}
+
+h1.ant-typography,
+h2.ant-typography,
+h3.ant-typography,
+h4.ant-typography,
+h5.ant-typography,
+h6.ant-typography {
+  color: @fabrion-white-100 !important;
+}
+
+// MUI Paper components (used for cards/containers) should have grey-100 background
+.MuiPaper-root {
+  background-color: @fabrion-grey-100 !important;
+}
+
+// MUI Table containers
+.MuiTableContainer-root {
+  background-color: @fabrion-grey-100 !important;
+}
+
+// MUI Box components
+.MuiBox-root {
+  background-color: transparent;
+}
+
+// Specific MUI Typography components
+.MuiTypography-root {
+  color: @fabrion-white-100 !important;
+}
+
+.MuiTypography-root.MuiTypography-body2 {
+  color: @fabrion-white-100 !important;
+}
+
+// Primary buttons should use fabrion red
+.ant-btn-primary,
+.ant-btn.ant-btn-primary {
+  background-color: @fabrion-red-100 !important;
+  border-color: @fabrion-red-100 !important;
+  color: @fabrion-white-100 !important;
+
+  &:hover,
+  &:focus {
+    background-color: @fabrion-red-50 !important;
+    border-color: @fabrion-red-50 !important;
+    color: @fabrion-white-100 !important;
+  }
+
+  &:active {
+    background-color: @fabrion-red-100 !important;
+    border-color: @fabrion-red-100 !important;
+  }
+
+  &[disabled] {
+    background-color: @fabrion-grey-40 !important;
+    border-color: @fabrion-grey-40 !important;
+    color: @fabrion-grey-20 !important;
+  }
+}
+
+// MUI Primary buttons
+.MuiButton-containedPrimary {
+  background-color: @fabrion-red-100 !important;
+
+  &:hover {
+    background-color: @fabrion-red-50 !important;
+  }
+}
+
+// MUI Default/Outlined buttons
+.MuiButton-outlined,
+.MuiButton-text {
+  background-color: @fabrion-grey-100 !important;
+  border-color: @fabrion-grey-70 !important;
+  color: @fabrion-white-100 !important;
+
+  &:hover {
+    background-color: @fabrion-grey-70 !important;
+    border-color: @fabrion-grey-70 !important;
+  }
+}
+
+// MUI TableHead - with highest specificity
+thead.MuiTableHead-root,
+.MuiTableHead-root {
+  background-color: @fabrion-grey-100 !important;
+  border-bottom: 1px solid @fabrion-grey-70 !important;
+
+  th.MuiTableCell-head,
+  .MuiTableCell-head {
+    background-color: @fabrion-grey-100 !important;
+    color: @fabrion-white-100 !important;
+    border-bottom: 1px solid @fabrion-grey-70 !important;
+    border-bottom-color: @fabrion-grey-70 !important;
+  }
+
+  tr {
+    border-bottom: 1px solid @fabrion-grey-70 !important;
+  }
+}
+
+// Additional override for table header border in TableContainer
+.MuiTableContainer-root {
+  .MuiTableHead-root {
+    border-bottom: 1px solid @fabrion-grey-70 !important;
+
+    .MuiTableCell-head {
+      border-bottom: 1px solid @fabrion-grey-70 !important;
+    }
+
+    tr {
+      border-bottom: 1px solid @fabrion-grey-70 !important;
+    }
+  }
+}
+
+// Ultra-specific override using attribute selector for table header border
+div[class*='MuiTableContainer'] {
+  thead[class*='MuiTableHead'] {
+    border-bottom: 1px solid @fabrion-grey-70 !important;
+
+    tr {
+      border-bottom: 1px solid @fabrion-grey-70 !important;
+
+      th {
+        border-bottom: 1px solid @fabrion-grey-70 !important;
+      }
+    }
+
+    th[class*='MuiTableCell'] {
+      border-bottom: 1px solid @fabrion-grey-70 !important;
+    }
+  }
+
+  table {
+    thead {
+      border-bottom: 1px solid @fabrion-grey-70 !important;
+
+      tr {
+        border-bottom: 1px solid @fabrion-grey-70 !important;
+
+        th {
+          border-bottom: 1px solid @fabrion-grey-70 !important;
+        }
+      }
+    }
+  }
+}
+
+// Pagination buttons
+.ant-pagination-prev,
+.ant-pagination-next {
+  button {
+    background-color: @fabrion-grey-100 !important;
+    border-color: @fabrion-grey-70 !important;
+    color: @fabrion-white-100 !important;
+
+    &:hover {
+      background-color: @fabrion-grey-70 !important;
+      border-color: @fabrion-grey-70 !important;
+    }
+  }
+}
+
+.ant-pagination-item {
+  background-color: @fabrion-grey-100 !important;
+  border-color: @fabrion-grey-70 !important;
+
+  a {
+    color: @fabrion-white-100 !important;
+  }
+
+  &:hover {
+    background-color: @fabrion-grey-70 !important;
+  }
+}
+
+.ant-pagination-item-active {
+  background-color: @fabrion-red-100 !important;
+  border-color: @fabrion-red-100 !important;
+
+  a {
+    color: @fabrion-white-100 !important;
+  }
+}
+
+// MUI Table cells
+.MuiTableCell-root {
+  color: @fabrion-white-100 !important;
+  border-color: @fabrion-grey-70 !important;
+  border-bottom-color: @fabrion-grey-70 !important;
+}
+
+// MUI Table borders - comprehensive coverage
+.MuiTable-root {
+  border-color: @fabrion-grey-70 !important;
+
+  thead {
+    border-bottom: 1px solid @fabrion-grey-70 !important;
+
+    tr {
+      border-bottom: 1px solid @fabrion-grey-70 !important;
+    }
+
+    th {
+      border-bottom: 1px solid @fabrion-grey-70 !important;
+    }
+  }
+
+  tbody tr {
+    border-color: @fabrion-grey-70 !important;
+  }
+}
+
+// Additional global MUI table cell border overrides
+table {
+  thead {
+    th {
+      border-bottom: 1px solid @fabrion-grey-70 !important;
+    }
+
+    tr {
+      border-bottom: 1px solid @fabrion-grey-70 !important;
+    }
+  }
+}
+
+// MUI TableBody
+.MuiTableBody-root {
+  .MuiTableCell-body {
+    background-color: @fabrion-grey-70 !important;
+    color: @fabrion-white-100 !important;
+  }
+}
+
+// MUI TableRow
+.MuiTableRow-root {
+  &:hover {
+    background-color: @fabrion-grey-70 !important;
+  }
+}
+
+// MUI Checkbox
+.MuiCheckbox-root {
+  color: @fabrion-white-100 !important;
+
+  &.Mui-checked {
+    color: @fabrion-red-100 !important;
+  }
+}
+
+// MUI IconButton
+.MuiIconButton-root {
+  color: @fabrion-white-100 !important;
+
+  &:hover {
+    background-color: @fabrion-grey-70 !important;
+  }
+}
+
+// Ensure all ant buttons without specific classes get styled
+.ant-btn:not(.ant-btn-primary):not(.ant-btn-link):not(.ant-btn-text) {
+  background-color: @fabrion-grey-100 !important;
+  border-color: @fabrion-grey-70 !important;
+  color: @fabrion-white-100 !important;
+
+  &:hover {
+    background-color: @fabrion-grey-70 !important;
+    border-color: @fabrion-grey-70 !important;
+  }
+}
+
+// Ant button text and link variants
+.ant-btn-text,
+.ant-btn-link {
+  color: @fabrion-white-100 !important;
+
+  &:hover {
+    color: @fabrion-red-100 !important;
+  }
+}
+
+// Ensure table headers are properly styled
+.ant-table-thead {
+  th {
+    background-color: @fabrion-grey-100 !important;
+    color: @fabrion-white-100 !important;
+    border-color: @fabrion-grey-70 !important;
+  }
+}
+
+// Icon buttons in tables and UI
+svg {
+  color: inherit;
+}
+
+// Global border colors
+.MuiPaper-root,
+.MuiTableContainer-root,
+.ant-card,
+.ant-table,
+.ant-table-wrapper,
+.table-container {
+  border-color: @fabrion-grey-70 !important;
+}
+
+// MUI Divider
+.MuiDivider-root {
+  border-color: @fabrion-grey-70 !important;
+  background-color: @fabrion-grey-70 !important;
+}
+
+// MUI Box borders (used in Domains page header)
+.MuiBox-root {
+  border-color: @fabrion-grey-70 !important;
+}
+
+// MUI TextField (used for search inputs) - with highest specificity
+div.MuiTextField-root,
+.MuiTextField-root {
+  .MuiInputBase-root {
+    background-color: @fabrion-grey-100 !important;
+    color: @fabrion-white-100 !important;
+
+    &:hover .MuiOutlinedInput-notchedOutline {
+      border-color: @fabrion-grey-70 !important;
+    }
+
+    &.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-color: @primary-color !important;
+    }
+  }
+
+  div.MuiOutlinedInput-root,
+  .MuiOutlinedInput-root {
+    background-color: @fabrion-grey-100 !important;
+    border: 1px solid @fabrion-grey-70 !important;
+    border-color: @fabrion-grey-70 !important;
+    box-shadow: none !important;
+
+    &:hover {
+      border: 1px solid @fabrion-grey-70 !important;
+      border-color: @fabrion-grey-70 !important;
+    }
+
+    &.Mui-focused {
+      border: 1px solid @primary-color !important;
+      border-color: @primary-color !important;
+    }
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    border-color: @fabrion-grey-70 !important;
+    border: none !important;
+  }
+
+  .MuiInputBase-input {
+    color: @fabrion-white-100 !important;
+
+    &::placeholder {
+      color: #aaaaaa !important;
+      opacity: 1;
+    }
+  }
+
+  .MuiInputLabel-root {
+    color: @fabrion-grey-40 !important;
+
+    &.Mui-focused {
+      color: @primary-color !important;
+    }
+  }
+}
+
+// Additional override with even higher specificity for search inputs
+.MuiBox-root .MuiTextField-root .MuiOutlinedInput-root {
+  border: 1px solid @fabrion-grey-70 !important;
+
+  &:hover {
+    border: 1px solid @fabrion-grey-70 !important;
+  }
+
+  &.Mui-focused {
+    border: 1px solid @primary-color !important;
+  }
+}
+
+// Ultra-specific override using attribute selector for MUI TextField border
+div[class*='MuiTextField'] {
+  div[class*='MuiOutlinedInput-root'] {
+    border: 1px solid @fabrion-grey-70 !important;
+    background-color: @fabrion-grey-100 !important;
+
+    &:hover {
+      border: 1px solid @fabrion-grey-70 !important;
+    }
+
+    fieldset {
+      border: none !important;
+    }
+  }
+}
+
+// MUI Button (Previous/Next buttons)
+.MuiButton-containedSecondary {
+  background-color: @fabrion-grey-100 !important;
+  border: 1px solid @fabrion-grey-70 !important;
+  color: @fabrion-white-100 !important;
+
+  &:hover {
+    background-color: @fabrion-grey-70 !important;
+    border-color: @fabrion-grey-70 !important;
+  }
+
+  &.Mui-disabled {
+    background-color: @fabrion-grey-70 !important;
+    border-color: @fabrion-grey-70 !important;
+    color: @fabrion-grey-40 !important;
+  }
+
+  svg {
+    color: @fabrion-white-100 !important;
+  }
+}
+
+// MUI Pagination
+.MuiPagination-root {
+  .MuiPaginationItem-root {
+    background-color: @fabrion-grey-100 !important;
+    border-color: @fabrion-grey-70 !important;
+    color: @fabrion-white-100 !important;
+
+    &:hover {
+      background-color: @fabrion-grey-70 !important;
+    }
+
+    &.Mui-selected {
+      background-color: @fabrion-red-100 !important;
+      border-color: @fabrion-red-100 !important;
+      color: @fabrion-white-100 !important;
+    }
+  }
+}
+
+// MUI Input Adornments (search icons)
+.MuiInputAdornment-root {
+  svg {
+    color: @fabrion-white-100 !important;
+  }
+}
+
+// ReactFlow Minimap styling
+.react-flow__minimap {
+  background-color: @fabrion-grey-100 !important;
+
+  svg {
+    background-color: @fabrion-grey-100 !important;
+  }
+
+  .react-flow__minimap-mask {
+    fill: @fabrion-grey-100 !important;
+  }
+
+  .react-flow__minimap-node {
+    fill: @fabrion-grey-70 !important;
+  }
+}
+
+// React Grid Layout items should have dark background
+.react-grid-item {
+  background-color: transparent !important;
+
+  &.static {
+    background-color: @fabrion-grey-100 !important;
+  }
+}
+
+// All table borders
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td,
+.MuiTableCell-root {
+  border-color: @fabrion-grey-70 !important;
+}
+
+// Card and container borders
+.ant-card {
+  border: 1px solid @fabrion-grey-70 !important;
+}
+
+// Input and select borders
+.ant-input,
+.ant-select-selector,
+.ant-picker {
+  border-color: @fabrion-grey-70 !important;
+}
+
+// MUI Paper should have border
+.MuiPaper-root {
+  border: 1px solid @fabrion-grey-70 !important;
+}
+
+// Ensure all rows and sections have grey-70 borders
+.ant-row,
+.ant-col {
+  border-color: @fabrion-grey-70 !important;
+}
+
+// Checkbox borders
+.MuiCheckbox-root,
+.ant-checkbox {
+  border-color: @fabrion-grey-70 !important;
+
+  .ant-checkbox-inner {
+    border-color: @fabrion-grey-70 !important;
+  }
+}
+
+// Dropdown and menu borders
+.ant-dropdown,
+.ant-select-dropdown {
+  border-color: @fabrion-grey-70 !important;
+}
+
+// Modal borders
+.ant-modal-content {
+  border-color: @fabrion-grey-70 !important;
+}
+
+// Alert notifications
+.ant-alert {
+  background-color: @fabrion-grey-100 !important;
+  border-color: @fabrion-grey-70 !important;
+  color: @fabrion-white-100 !important;
+
+  .ant-alert-message {
+    color: @fabrion-white-100 !important;
+  }
+
+  .ant-alert-description {
+    color: @fabrion-white-100 !important;
+  }
+
+  .ant-alert-icon {
+    color: inherit;
+  }
+
+  &.ant-alert-error {
+    background-color: @fabrion-grey-100 !important;
+    border-color: #cb2531 !important;
+  }
+
+  &.ant-alert-warning {
+    background-color: @fabrion-grey-100 !important;
+    border-color: #f59638 !important;
+  }
+
+  &.ant-alert-success {
+    background-color: @fabrion-grey-100 !important;
+    border-color: #1d7c4d !important;
+  }
+
+  &.ant-alert-info {
+    background-color: @fabrion-grey-100 !important;
+    border-color: #3062d4 !important;
+  }
+}
+
+// Message notifications (toast)
+.ant-message {
+  .ant-message-notice-content {
+    background-color: @fabrion-grey-100 !important;
+    border: 1px solid @fabrion-grey-70 !important;
+    color: @fabrion-white-100 !important;
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+      0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  }
+}
+
+// Notification component
+.ant-notification {
+  .ant-notification-notice {
+    background-color: @fabrion-grey-100 !important;
+    border: 1px solid @fabrion-grey-70 !important;
+
+    .ant-notification-notice-message {
+      color: @fabrion-white-100 !important;
+    }
+
+    .ant-notification-notice-description {
+      color: @fabrion-white-100 !important;
+    }
+
+    .ant-notification-notice-icon {
+      color: inherit;
+    }
   }
 }

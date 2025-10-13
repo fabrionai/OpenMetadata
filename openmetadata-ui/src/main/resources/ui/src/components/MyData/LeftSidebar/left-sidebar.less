@@ -238,15 +238,27 @@
 
     .ant-menu.ant-menu-sub.ant-menu-inline {
       border-radius: 12px;
+      background-color: @fabrion-grey-100;
 
       .ant-menu-item {
         margin: 0;
         padding: 10px 16px !important;
         border-radius: 0;
         width: calc(100% - 0.01px);
+        background-color: @fabrion-grey-100;
+        color: @fabrion-white-100;
 
         .anticon {
           font-size: @left-sidebar-icon-size !important;
+        }
+
+        &:hover {
+          background-color: @fabrion-grey-70;
+        }
+
+        &.ant-menu-item-selected {
+          background-color: @primary-color;
+          color: @white;
         }
 
         &:last-child {

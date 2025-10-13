@@ -16,15 +16,65 @@
   .explore-node-count {
     span {
       color: @white;
-      background: @primary-color;
+      background: @fabrion-grey-70 !important;
     }
   }
 }
 .explore-tree {
+  background-color: @fabrion-grey-70 !important;
+  .ant-tree-list,
+  .ant-tree-list-holder,
+  .ant-tree-list-holder-inner {
+    background-color: @fabrion-grey-70 !important;
+  }
+
+  .ant-tree-treenode {
+    background-color: @fabrion-grey-70 !important;
+  }
+
+  .ant-tree-node-content-wrapper {
+    background-color: @fabrion-grey-70 !important;
+    &:hover {
+      background-color: @fabrion-grey-100 !important;
+    }
+    &.ant-tree-node-selected {
+      background-color: @fabrion-grey-100 !important;
+    }
+  }
+
   .ant-tree-iconEle {
     svg {
       width: 16px;
       height: 16px;
+    }
+  }
+
+  // Set text color to fabrion-grey-20
+  .ant-typography,
+  .ant-tree-title {
+    color: @fabrion-grey-20 !important;
+  }
+
+  // Set icon colors to fabrion-grey-20
+  .ant-tree-iconEle svg,
+  .ant-tree-switcher-icon svg {
+    color: @fabrion-grey-20 !important;
+    fill: @fabrion-grey-20 !important;
+
+    path,
+    circle,
+    rect,
+    polygon,
+    line,
+    polyline {
+      stroke: @fabrion-grey-20 !important;
+    }
+  }
+
+  // Set count badge text color
+  .explore-node-count {
+    .text-xs {
+      color: @fabrion-grey-20 !important;
     }
   }
 }

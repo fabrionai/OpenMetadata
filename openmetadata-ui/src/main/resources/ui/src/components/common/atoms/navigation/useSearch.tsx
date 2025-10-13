@@ -77,21 +77,22 @@ export const useSearch = (config: SearchConfig) => {
           width: config.customStyles?.searchBoxWidth ?? 354,
           '& .MuiOutlinedInput-root': {
             width: '100%',
-            backgroundColor: theme.palette.allShades?.blueGray?.[40],
+            backgroundColor: '#313131',
             boxShadow: 'none !important',
-            border: `1px solid ${theme.palette.allShades?.blueGray?.[200]} !important`,
+            border: '1px solid #4F4D4E !important',
             borderRadius: '10px',
             '& .MuiOutlinedInput-input': {
               fontSize: '14px !important',
+              color: '#FFFFFF !important',
             },
             '& .MuiOutlinedInput-notchedOutline': {
               border: 'none',
             },
             '&:hover': {
-              border: `1px solid ${theme.palette.allShades?.blueGray?.[200]} !important`,
+              border: '1px solid #4F4D4E !important',
             },
             '&.Mui-focused': {
-              border: `1px solid ${theme.palette.allShades?.blueGray?.[200]} !important`,
+              border: '1px solid #f41111 !important',
               outline: 'none',
             },
           },

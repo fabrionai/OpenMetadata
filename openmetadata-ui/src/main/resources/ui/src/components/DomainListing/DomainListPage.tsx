@@ -229,8 +229,8 @@ const DomainListPage = () => {
             gap: 4,
             px: 6,
             py: 4,
-            borderBottom: `1px solid`,
-            borderColor: theme.palette.allShades?.gray?.[200],
+            borderBottom: '1px solid',
+            borderColor: '#4F4D4E',
           }}>
           <Box sx={{ display: 'flex', gap: 5, alignItems: 'center' }}>
             {titleAndCount}

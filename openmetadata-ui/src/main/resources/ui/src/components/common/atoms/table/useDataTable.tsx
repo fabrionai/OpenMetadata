@@ -50,10 +50,21 @@ export const useDataTable = <T extends { id: string }>(
   const dataTable = useMemo(
     () => (
       <Table>
-        <TableHead>
+        <TableHead
+          sx={{
+            borderBottom: '1px solid #4F4D4E !important',
+            '& tr': {
+              borderBottom: '1px solid #4F4D4E !important',
+            },
+            '& th': {
+              borderBottom: '1px solid #4F4D4E !important',
+            },
+          }}>
           <TableRow>
             {enableSelection && (
-              <TableCell padding="checkbox">
+              <TableCell
+                padding="checkbox"
+                sx={{ borderBottom: '1px solid #4F4D4E !important' }}>
                 <Checkbox
                   checked={listing.isAllSelected}
                   indeterminate={listing.isIndeterminate}
@@ -69,7 +80,11 @@ export const useDataTable = <T extends { id: string }>(
               </TableCell>
             )}
             {listing.columns.map((column) => (
-              <TableCell key={column.key}>{t(column.labelKey)}</TableCell>
+              <TableCell
+                key={column.key}
+                sx={{ borderBottom: '1px solid #4F4D4E !important' }}>
+                {t(column.labelKey)}
+              </TableCell>
             ))}
           </TableRow>
         </TableHead>

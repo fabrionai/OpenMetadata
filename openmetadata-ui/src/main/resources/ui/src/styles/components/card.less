@@ -28,6 +28,11 @@
 .ant-card {
   background: @background-color;
   border-color: @border-color;
+  color: #ffffff;
+}
+
+.ant-card-head-title {
+  color: @fabrion-white-100;
 }
 
 .card-body-full {
@@ -90,6 +95,7 @@
 
 .ant-card-body {
   padding: @padding-mlg;
+  color: @fabrion-white-100;
 }
 
 .ant-card-feed > .ant-card-body {
@@ -106,13 +112,15 @@
 
 .ant-card.new-header-border-card {
   height: auto !important;
+  background-color: @fabrion-grey-100 !important;
 
   .ant-card-head {
-    background: @grey-50;
+    background: @fabrion-grey-100;
     border-radius: @border-rad-sm;
 
     .text-sm();
     font-weight: 500;
+    color: @fabrion-white-100;
   }
 
   .ant-card-body {
@@ -120,6 +128,7 @@
     max-height: none !important;
     transition: all 200ms ease;
     transition-property: height, left, top;
+    background-color: @fabrion-grey-100 !important;
   }
 
   .expand-collapse-icon {
@@ -155,20 +164,24 @@
     margin-left: @size-sm;
   }
 
-  border: 1px solid @grey-15;
+  border: 1px solid @fabrion-grey-70;
 }
 
 .bot-page-roles-card-header {
+  background-color: @fabrion-grey-100 !important;
+
   .ant-card-head {
-    background: @grey-50;
+    background: @fabrion-grey-100;
     border-radius: @border-rad-sm;
     .text-sm();
     font-weight: 500;
     border-bottom: none;
+    color: @fabrion-white-100;
   }
 
   .ant-card-body {
     height: auto !important;
     max-height: none !important;
+    background-color: @fabrion-grey-100 !important;
   }
 }

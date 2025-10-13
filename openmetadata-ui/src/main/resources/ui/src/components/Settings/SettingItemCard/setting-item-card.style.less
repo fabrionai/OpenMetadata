@@ -13,15 +13,15 @@
 @import (reference) '../../../styles/variables.less';
 
 .setting-card-item {
-  border: 1px solid @grey-15;
-  background-color: @white;
+  border: 1px solid @fabrion-grey-70;
+  background-color: @fabrion-grey-100;
   border-radius: 12px;
   width: 100%;
   cursor: pointer;
   height: 100%;
 
   &:hover {
-    border: 1px solid @blue-20;
+    border: 1px solid @primary-color;
   }
 
   .ant-card-body {
@@ -29,6 +29,7 @@
     align-items: center;
     gap: 16px;
     padding: 20px 4px;
+    background-color: @fabrion-grey-100;
   }
 
   .setting-card-icon {
@@ -67,11 +68,11 @@
     line-height: @size-mlg;
     gap: @size-xs;
     .ant-typography {
-      color: @grey-700;
+      color: @fabrion-white-100;
     }
 
     .ant-typography-ellipsis {
-      color: @grey-700;
+      color: @fabrion-white-100;
       margin-bottom: 0;
     }
   }

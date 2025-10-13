@@ -13,11 +13,11 @@
 
 @import '../../styles/variables.less';
 
-@left-panel-border-color: rgb(229, 231, 235);
+@left-panel-border-color: @fabrion-grey-70;
 @box-shadow-color: rgba(0, 0, 0, 0.06);
 @icon-color: #515151;
-@group-title-color: #76746f;
-@summary-card-bg-hover: #f0f1f3;
+@group-title-color: @fabrion-grey-20;
+@summary-card-bg-hover: @fabrion-grey-70;
 @target-blue-color: #1890ff;
 
 .data-insight-select-dropdown {
@@ -28,7 +28,7 @@
 }
 
 .data-insight-left-panel.ant-menu-root.ant-menu-inline {
-  background: @white;
+  background: @fabrion-grey-100;
   border: 0px;
   padding-top: @size-md;
   border-radius: @border-rad-sm;
@@ -162,12 +162,12 @@
 .entity-summary-container {
   cursor: pointer;
   &:hover {
-    background: @grey-1;
+    background: @fabrion-grey-70;
   }
   .non-active-details {
     .entity-summary-name,
     .entity-summary-value {
-      color: @grey-3;
+      color: @fabrion-grey-40;
     }
   }
 }

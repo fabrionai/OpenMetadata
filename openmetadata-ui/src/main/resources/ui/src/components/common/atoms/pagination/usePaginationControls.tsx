@@ -47,7 +47,7 @@ export const usePaginationControls = (config: PaginationControlsConfig) => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          borderTop: `1px solid ${theme.palette.allShades?.gray?.[200]}`,
+          borderTop: '1px solid #4F4D4E',
           pt: 3.5,
           px: 6,
           pb: 5,

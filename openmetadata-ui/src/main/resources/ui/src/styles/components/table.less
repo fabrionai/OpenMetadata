@@ -14,29 +14,52 @@
 @import (reference) '../variables.less';
 
 .ant-table-wrapper {
+  background-color: transparent !important;
+
   .ant-table-thead {
     tr > th {
       font-weight: 500;
-      color: @grey-600;
+      color: @fabrion-white-100;
       border-right: none;
-      border-color: @border-color-1;
+      border-color: @fabrion-grey-70;
+      background-color: @fabrion-grey-70;
     }
     tr > td {
-      color: @text-color;
+      color: @fabrion-white-100;
     }
-    background: @grey-1;
+    background: @fabrion-grey-70;
   }
   .ant-table-body {
     tr > td {
-      border-color: @border-color-1;
+      border-color: @fabrion-grey-70;
+      color: @fabrion-white-100;
+      background-color: @fabrion-grey-70;
+    }
+
+    // Disable hover state - keep same background
+    tr:hover > td {
+      background-color: @fabrion-grey-70 !important;
     }
   }
   .ant-table-cell {
     vertical-align: top;
   }
+
+  // Ensure table itself has dark background
+  .ant-table {
+    background-color: @fabrion-grey-70 !important;
+  }
+
+  .ant-table-container {
+    background-color: transparent !important;
+  }
+
+  .ant-table-content {
+    background-color: transparent !important;
+  }
   .ant-table-bordered {
     table {
-      border-color: @border-color-1;
+      border-color: @fabrion-grey-70;
       tbody {
         tr {
           td {
@@ -56,6 +79,8 @@
           }
         }
         .ant-table-cell-row-hover {
+          background-color: @fabrion-grey-70 !important;
+
           .drag-icon {
             visibility: initial;
           }
@@ -83,7 +108,7 @@
             border-bottom: none;
 
             td {
-              border-bottom: 1px solid @border-color-1;
+              border-bottom: 1px solid @fabrion-grey-70;
             }
           }
         }
@@ -185,18 +210,18 @@
 .table-action-icon {
   width: 14px;
   height: 14px;
-  color: @grey-600;
+  color: @fabrion-white-100;
   cursor: pointer;
 }
 
 .table-expand-icon {
   margin-right: 8px;
-  color: @text-color;
+  color: @fabrion-white-100;
   font-size: 12px;
 }
 
 .filter-icon {
-  color: @grey-600;
+  color: @fabrion-white-100;
 }
 
 .filter-icon-active {
@@ -206,5 +231,5 @@
 .drag-icon {
   width: 6px;
   margin-right: 8px;
-  color: @grey-4;
+  color: @fabrion-grey-40;
 }

@@ -14,14 +14,16 @@
 @import (reference) '../../styles/variables.less';
 
 @label-color: #6b7280;
-@summary-card-bg-hover: #f0f1f3;
+@summary-card-bg-hover: @fabrion-grey-70;
 
 .data-insight-card {
   border-radius: @border-rad-md;
+  background-color: @fabrion-grey-100;
 
   .ant-card-head {
     border-bottom: none;
     padding: @padding-sm @padding-md 0px;
+    background-color: @fabrion-grey-100;
   }
   .custom-data-insight-tooltip {
     .ant-card-head {
@@ -37,6 +39,7 @@
   }
   .ant-card-body {
     padding: @padding-mlg;
+    background-color: @fabrion-grey-100;
   }
 }
 
@@ -44,12 +47,13 @@
   max-width: 100%;
 }
 .ant-typography.data-insight-label-text {
-  color: @label-color;
+  color: @fabrion-grey-20;
 }
 .ant-typography.summary-card-description {
   font-weight: 500;
   font-size: 18px;
   margin-bottom: 0;
+  color: @fabrion-white-100;
 }
 
 .summary-card-item {
@@ -57,6 +61,7 @@
   border: @global-border;
   border-radius: 10px;
   padding: 16px;
+  background-color: @fabrion-grey-100;
   &:hover {
     background-color: @summary-card-bg-hover;
     border-radius: 6px;

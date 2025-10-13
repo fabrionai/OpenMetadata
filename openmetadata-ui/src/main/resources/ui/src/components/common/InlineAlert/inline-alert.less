@@ -10,8 +10,11 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
+@import (reference) '../../../styles/variables.less';
+
 .inline-error-container {
   border-radius: 10px;
+  color: @fabrion-white-100;
 
   .truncated-text {
     display: -webkit-box;
@@ -55,26 +58,26 @@
 
   &.error-alert {
     border-color: #cb2531;
-    background-color: #fcf0f1;
+    background-color: @fabrion-grey-100;
   }
 
   &.warning-alert {
     border-color: #f59638;
-    background-color: #fff5eb;
+    background-color: @fabrion-grey-100;
   }
 
   &.success-alert {
     border-color: #1d7c4d;
-    background-color: #f4fbf7;
+    background-color: @fabrion-grey-100;
   }
 
   &.info-alert {
     border-color: #3062d4;
-    background-color: #f5f8ff;
+    background-color: @fabrion-grey-100;
   }
 
   &.default-alert {
-    border-color: #cfd6dd;
-    background-color: #f5f7f9;
+    border-color: @fabrion-grey-70;
+    background-color: @fabrion-grey-100;
   }
 }

@@ -15,9 +15,44 @@
 .table-container {
   height: initial !important;
   border-radius: 12px;
-  background-color: @white;
-  border: 1px solid @border-color-1;
+  background-color: @fabrion-grey-100 !important;
+  border: 1px solid @fabrion-grey-100 !important;
   overflow: hidden;
+
+  // Force grey-100 background always
+  &,
+  &:hover {
+    background-color: @fabrion-grey-100 !important;
+  }
+
+  // Ensure no white backgrounds anywhere
+  * {
+    &:not(.ant-btn):not(.ant-tag) {
+      background-color: inherit;
+    }
+  }
+
+  // Keep wrapper areas grey-100 on hover (but not table cells)
+  > div:hover:not(.ant-table-wrapper) {
+    background-color: @fabrion-grey-100 !important;
+  }
+
+  // Table wrapper itself stays grey-100 on hover
+  .ant-table-wrapper,
+  .ant-table-wrapper:hover {
+    background-color: @fabrion-grey-100 !important;
+  }
+
+  // Empty state area should stay grey-100
+  .ant-empty,
+  .ant-empty:hover {
+    background-color: @fabrion-grey-100 !important;
+  }
+
+  // Table rows should stay grey-70 on hover (no change)
+  .ant-table-tbody tr:hover > td {
+    background-color: @fabrion-grey-70 !important;
+  }
 
   .ant-table-body {
     scrollbar-width: none;
@@ -37,20 +72,21 @@
     align-items: center;
     gap: 4px;
     font-weight: 500;
-    color: @grey-600;
+    color: @fabrion-white-100;
 
     .ant-dropdown-menu {
-      background-color: @white;
-      border-color: @border-color;
+      background-color: @fabrion-grey-100;
+      border-color: @fabrion-grey-70;
     }
 
     .ant-dropdown-menu-item {
       padding-left: 0px;
       padding-right: 0px;
+      color: @fabrion-white-100;
     }
 
     .ant-dropdown-menu-item:hover {
-      background-color: @white;
+      background-color: @fabrion-grey-70;
       color: inherit;
     }
     svg {
@@ -59,8 +95,9 @@
   }
 
   .pagination-container {
-    border-top: 1px solid @border-color;
+    border-top: 1px solid @fabrion-grey-70;
     padding: 16px 0;
+    background-color: @fabrion-grey-100;
   }
 }
 

@@ -23,6 +23,23 @@
 
     .ant-dropdown-menu-item-group-title {
       padding: 4px 0;
+      color: @fabrion-grey-20 !important;
+
+      svg,
+      .anticon {
+        color: @fabrion-grey-20 !important;
+        fill: @fabrion-grey-20 !important;
+
+        path,
+        circle,
+        rect,
+        polygon,
+        line,
+        polyline {
+          fill: @fabrion-grey-20 !important;
+          stroke: @fabrion-grey-20 !important;
+        }
+      }
     }
 
     .ant-dropdown-menu-item-only-child {
@@ -31,8 +48,24 @@
     }
 
     .ant-dropdown-menu-item-disabled {
-      color: inherit;
+      color: @fabrion-grey-20 !important;
       cursor: default;
+
+      svg,
+      .anticon {
+        color: @fabrion-grey-20 !important;
+        fill: @fabrion-grey-20 !important;
+
+        path,
+        circle,
+        rect,
+        polygon,
+        line,
+        polyline {
+          fill: @fabrion-grey-20 !important;
+          stroke: @fabrion-grey-20 !important;
+        }
+      }
     }
   }
 
@@ -50,6 +83,50 @@
     font-size: @size-sm;
     font-style: normal;
     font-weight: @font-medium;
+  }
+
+  // Make all text and icons light grey
+  .ant-typography {
+    color: @fabrion-grey-20 !important;
+  }
+
+  svg,
+  .anticon {
+    color: @fabrion-grey-20 !important;
+    fill: @fabrion-grey-20 !important;
+
+    path,
+    circle,
+    rect,
+    polygon,
+    line,
+    polyline {
+      fill: @fabrion-grey-20 !important;
+      stroke: @fabrion-grey-20 !important;
+    }
+  }
+
+  // Override utility classes for section headers
+  .text-grey-900,
+  .text-base-color,
+  span.font-medium {
+    color: @fabrion-grey-20 !important;
+  }
+
+  .text-base-color svg,
+  .text-base-color .anticon {
+    color: @fabrion-grey-20 !important;
+    fill: @fabrion-grey-20 !important;
+
+    path,
+    circle,
+    rect,
+    polygon,
+    line,
+    polyline {
+      fill: @fabrion-grey-20 !important;
+      stroke: @fabrion-grey-20 !important;
+    }
   }
 }
 

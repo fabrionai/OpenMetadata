@@ -10,20 +10,18 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
+import MonogramSrc from '../../assets/img/fabrion-logo/icon-Red.png';
+import LogoSrc from '../../assets/img/fabrion-logo/Logo-White+Red.png';
 import WelcomeScreenSrc from '../../assets/img/welcome-screen.png';
-import MonogramSrc, {
-  ReactComponent as Monogram,
-} from '../../assets/svg/logo-monogram.svg';
-import LogoSrc, { ReactComponent as Logo } from '../../assets/svg/logo.svg';
 import { t } from '../i18next/LocalUtil';
 
 class BrandClassBase {
   public getMonogram() {
-    return { src: MonogramSrc, svg: Monogram };
+    return { src: MonogramSrc, svg: null };
   }
 
   public getLogo() {
-    return { src: LogoSrc, svg: Logo };
+    return { src: LogoSrc, svg: null };
   }
 
   public getPageTitle() {

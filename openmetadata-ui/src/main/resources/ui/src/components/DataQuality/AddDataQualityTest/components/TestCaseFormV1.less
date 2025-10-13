@@ -18,6 +18,20 @@
   min-height: 100vh;
   padding-bottom: 80px; // Space for fixed buttons
 
+  // Global text color overrides for dark theme
+  color: @fabrion-white-100;
+
+  p,
+  span,
+  div,
+  label {
+    color: inherit;
+  }
+
+  .ant-typography {
+    color: @fabrion-white-100;
+  }
+
   .ant-form-item {
     margin-bottom: @size-lg;
 
@@ -43,7 +57,7 @@
       z-index: 1;
 
       .test-type-label {
-        color: @grey-700;
+        color: @fabrion-white-100;
         font-weight: @font-medium;
         font-size: @font-size-base;
       }
@@ -66,10 +80,10 @@
   }
 
   .form-card-section {
-    background-color: @grey-26;
+    background-color: @fabrion-grey-100;
     border-radius: @border-rad-sm;
     margin-bottom: @size-mlg;
-    border: none;
+    border: 1px solid @fabrion-grey-70;
 
     .ant-card-body {
       padding: @size-md;
@@ -85,12 +99,12 @@
 
     .card-title-container {
       .card-title-text {
-        color: @grey-700;
+        color: @fabrion-white-100;
         font-weight: @font-semibold;
         margin-bottom: 0px;
       }
       .card-title-description {
-        color: @grey-600;
+        color: @fabrion-grey-20;
         margin-bottom: @margin-mlg;
       }
     }
@@ -105,11 +119,12 @@
 
   .scheduler-card {
     .selection-card {
-      background-color: @white;
+      background-color: @fabrion-grey-100;
+      border-color: @fabrion-grey-70;
 
       &.selected,
       &:hover {
-        background-color: @blue-22;
+        background-color: @fabrion-grey-70;
       }
     }
   }
@@ -118,7 +133,7 @@
     margin-bottom: @size-lg;
 
     .form-section-title {
-      color: @grey-800;
+      color: @fabrion-white-100;
       font-size: @size-md;
       font-weight: @font-medium;
       margin-bottom: @size-mlg;
@@ -137,8 +152,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: @white;
-    border-top: 1px solid @grey-200;
+    background: @fabrion-grey-100;
+    border-top: 1px solid @fabrion-grey-70;
     padding: @size-lg @size-xl;
     display: flex;
     justify-content: flex-end;
@@ -157,9 +172,10 @@
 
   .block-editor-wrapper {
     .om-block-editor {
-      background-color: @white;
+      background-color: @fabrion-grey-100;
       max-height: 120px;
       padding: @size-sm;
+      border: 1px solid @fabrion-grey-70;
 
       p:last-child {
         padding-bottom: 75px;
@@ -189,14 +205,33 @@
 }
 
 .test-case-form-drawer {
+  .ant-drawer-header {
+    background-color: @fabrion-grey-100;
+    border-bottom: 1px solid @fabrion-grey-70;
+
+    .ant-drawer-title {
+      color: @fabrion-white-100;
+    }
+
+    .ant-drawer-close {
+      color: @fabrion-white-100;
+    }
+  }
+
   .ant-drawer-body {
     padding: 0 @padding-lg;
+    background-color: @fabrion-grey-100;
 
     .test-case-form-v1,
     .edit-test-case-form-v1 {
       padding-top: @padding-lg;
       padding-bottom: @padding-lg;
     }
+  }
+
+  .ant-drawer-footer {
+    background-color: @fabrion-grey-100;
+    border-top: 1px solid @fabrion-grey-70;
   }
 }
 
@@ -220,10 +255,101 @@
 
   .drawer-doc-panel {
     overflow-y: auto;
-    border: 1px solid @grey-15;
+    border: 1px solid @fabrion-grey-70;
     border-radius: @border-rad-sm;
     margin: @margin-lg @margin-lg @margin-lg 0;
     padding: 0 @padding-mlg;
+    background-color: @fabrion-grey-100;
+
+    // Ensure all text is readable on dark background
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: @fabrion-white-100 !important;
+    }
+
+    p,
+    span,
+    div,
+    li {
+      color: @fabrion-white-100 !important;
+    }
+
+    strong,
+    b {
+      color: @fabrion-white-100 !important;
+    }
+
+    // Override any Typography components
+    .ant-typography {
+      color: @fabrion-white-100 !important;
+    }
+
+    // Ensure list items are visible
+    ul,
+    ol {
+      li {
+        color: @fabrion-white-100 !important;
+      }
+    }
+
+    // Code blocks and examples sections
+    pre,
+    code,
+    blockquote,
+    figure,
+    .code-block,
+    .example-block {
+      background-color: @fabrion-black !important;
+      color: @fabrion-white-100 !important;
+      border: 1px solid @fabrion-grey-70 !important;
+      padding: 12px !important;
+      border-radius: 8px !important;
+    }
+
+    // Any container that might hold examples
+    [class*='example'],
+    [class*='code'],
+    [class*='snippet'],
+    [class*='demo'],
+    [class*='sample'] {
+      background-color: @fabrion-black !important;
+      color: @fabrion-white-100 !important;
+      border: 1px solid @fabrion-grey-70 !important;
+    }
+
+    // Force any white/light backgrounds to be dark
+    div[style*='background-color: rgb(255'],
+    div[style*='background: rgb(255'],
+    div[style*='background-color: white'],
+    div[style*='background: white'],
+    *[style*='background-color: rgb(255'],
+    *[style*='background: rgb(255'],
+    *[style*='background-color: white'],
+    *[style*='background: white'],
+    *[style*='background-color:#fff'],
+    *[style*='background:#fff'] {
+      background-color: @fabrion-black !important;
+      background: @fabrion-black !important;
+      color: @fabrion-white-100 !important;
+    }
+
+    // Catch any remaining light-colored boxes (background-color in range 240-255)
+    *[style*='background-color: rgb(24'],
+    *[style*='background-color: rgb(25'] {
+      background-color: @fabrion-black !important;
+      color: @fabrion-white-100 !important;
+    }
+
+    // Override any light grey backgrounds
+    *[style*='background-color: #f'],
+    *[style*='background: #f'] {
+      background-color: @fabrion-black !important;
+      color: @fabrion-white-100 !important;
+    }
   }
 }
 

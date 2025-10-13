@@ -13,6 +13,11 @@
 
 .ant-tabs-tab.ant-tabs-tab-active {
   font-weight: 500;
+
+  .anticon,
+  svg {
+    color: @primary-color;
+  }
 }
 
 .ant-tabs.ant-tabs-top.h-full {
@@ -38,6 +43,20 @@
 
 .ant-tabs-tab {
   color: @text-color-tertiary;
+
+  .anticon,
+  svg {
+    color: @fabrion-white-100;
+  }
+
+  .ant-tabs-tab-btn {
+    color: @fabrion-white-100;
+
+    .anticon,
+    svg {
+      color: @fabrion-white-100;
+    }
+  }
 }
 
 .ant-tabs.tabs-new {
@@ -57,9 +76,9 @@
     margin: 0;
     padding: 0 20px;
     height: 48px;
-    background: @white;
+    background: @fabrion-grey-70;
     border-radius: 12px;
-    border: 1px solid @grey-15;
+    border: 1px solid @fabrion-grey-70;
 
     &::before {
       border-bottom: none;
@@ -71,10 +90,21 @@
       .ant-tabs-tab {
         padding: 8px 0;
         position: relative;
+        color: @fabrion-white-100;
+
+        .anticon,
+        svg {
+          color: @fabrion-white-100;
+        }
 
         &.ant-tabs-tab-active {
           color: @primary-color;
           font-weight: 600;
+
+          .anticon,
+          svg {
+            color: @primary-color;
+          }
 
           [data-testid='count'] > span {
             background-color: @primary-color;
@@ -89,7 +119,7 @@
   .ant-tabs-tabpane {
     margin-top: @padding-sm;
     border-radius: @border-rad-sm;
-    background-color: @white;
+    background-color: @fabrion-grey-70;
   }
 
   .ant-tabs-ink-bar {

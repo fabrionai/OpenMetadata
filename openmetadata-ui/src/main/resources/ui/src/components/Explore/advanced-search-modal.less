@@ -11,15 +11,64 @@
  *  limitations under the License.
  */
 
+@import (reference) '../../styles/variables.less';
+
 .advanced-search-modal {
+  .ant-modal-content {
+    background-color: @fabrion-grey-100 !important;
+  }
+
+  .ant-modal-header {
+    background-color: @fabrion-grey-100 !important;
+    border-bottom: 1px solid @fabrion-grey-70;
+  }
+
+  .ant-modal-title {
+    color: @fabrion-white-100 !important;
+  }
+
+  .ant-modal-body {
+    background-color: @fabrion-grey-100 !important;
+  }
+
+  .ant-modal-footer {
+    background-color: @fabrion-grey-100 !important;
+    border-top: 1px solid @fabrion-grey-70;
+  }
+
+  // Query builder container
+  .query-builder,
+  .qb-lite,
+  .qb-drag-handler,
+  .group--header,
+  .group--footer,
+  .group-or-rule,
+  .rule--body,
+  .rule--header {
+    background-color: @fabrion-grey-100 !important;
+  }
+
   .group.rule_group {
-    border: none !important;
+    border: 1px solid @fabrion-grey-70 !important;
     padding: 0;
+    background-color: @fabrion-grey-100 !important;
+    border-radius: 8px;
 
     .group--children {
       padding-top: 0;
       padding-bottom: 0;
       margin: 0;
+      background-color: @fabrion-grey-100 !important;
+      border: 1px solid @fabrion-grey-70 !important;
+      border-radius: 8px;
+    }
+  }
+
+  // Force border color on all group and rule elements
+  div[class*='group'],
+  div[class*='rule'] {
+    &:not([class*='ant-btn']) {
+      border-color: @fabrion-grey-70 !important;
     }
   }
 
@@ -40,5 +89,47 @@
     .group--field {
       align-self: flex-start;
     }
+  }
+
+  // Additional query builder elements
+  .group,
+  .rule,
+  .rule--widget,
+  .widget--widget,
+  .query-builder-container,
+  .query-builder,
+  .qb-drag-handler {
+    background-color: @fabrion-grey-100 !important;
+  }
+
+  // Override any white backgrounds in query builder
+  div[class*='group'],
+  div[class*='rule'],
+  div[class*='query'],
+  div[class*='qb'],
+  .ant-modal-body > div {
+    &:not([class*='ant-btn']) {
+      background-color: @fabrion-grey-100 !important;
+    }
+  }
+
+  // Target all divs within the modal body
+  .ant-modal-body {
+    & > * {
+      background-color: @fabrion-grey-100 !important;
+    }
+
+    div:not(.ant-btn):not(.ant-select):not([class*='icon']) {
+      background-color: @fabrion-grey-100 !important;
+    }
+  }
+
+  // Set text colors to ensure visibility
+  .ant-modal-body,
+  .group--field label,
+  .rule--widget,
+  div[class*='group'],
+  div[class*='rule'] {
+    color: @fabrion-white-100 !important;
   }
 }

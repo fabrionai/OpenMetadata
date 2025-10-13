@@ -14,13 +14,21 @@
 @import (reference) '../../styles/variables.less';
 
 .data-quality-page-tabs.ant-tabs.tabs-new {
+  background-color: transparent !important;
+
   .ant-tabs-tabpane {
     margin-top: @size-md;
-    background-color: unset;
+    background-color: transparent !important;
+  }
+
+  .ant-tabs-content {
+    background-color: transparent !important;
   }
 }
 
 .data-quality-page {
+  background-color: transparent !important;
+
   .data-assets-coverage-icon,
   .all-tests-icon {
     &.icon-container {
@@ -38,5 +46,46 @@
         color: @green-500;
       }
     }
+  }
+
+  // All cards within data quality page
+  .ant-card {
+    background-color: @fabrion-grey-100 !important;
+    border-color: @fabrion-grey-70 !important;
+
+    .ant-card-body {
+      background-color: @fabrion-grey-100 !important;
+    }
+  }
+
+  // Ensure all containers within data quality page use grey-100 background
+  .ant-table-wrapper,
+  .table-container {
+    background-color: @fabrion-grey-100 !important;
+  }
+
+  // Search input area and rows
+  .ant-row,
+  .ant-col {
+    background-color: transparent !important;
+  }
+
+  // White section that contains the table
+  .MuiPaper-root,
+  .MuiTableContainer-root,
+  .MuiBox-root {
+    background-color: @fabrion-grey-100 !important;
+  }
+
+  // Ensure tab content has dark background
+  .ant-tabs-content,
+  .ant-tabs-tabpane {
+    background-color: transparent !important;
+  }
+
+  // Force any remaining white backgrounds to grey-100
+  div[style*='background-color: rgb(255, 255, 255)'],
+  div[style*='background: rgb(255, 255, 255)'] {
+    background-color: @fabrion-grey-100 !important;
   }
 }

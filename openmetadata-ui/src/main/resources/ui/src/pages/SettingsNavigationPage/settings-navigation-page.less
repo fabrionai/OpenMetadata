@@ -14,11 +14,31 @@
 @import (reference) '../../styles/variables.less';
 
 .custom-navigation-tree-container {
+  background-color: @fabrion-grey-100 !important;
+  border-color: @fabrion-grey-70 !important;
+
+  .ant-card-body {
+    background-color: @fabrion-grey-100 !important;
+  }
+
+  .ant-card-head {
+    background-color: @fabrion-grey-100 !important;
+    border-color: @fabrion-grey-70 !important;
+    color: @fabrion-white-100 !important;
+
+    .ant-card-head-title {
+      color: @fabrion-white-100 !important;
+    }
+  }
+
   .ant-tree-list {
     width: 420px;
+    background-color: @fabrion-grey-100 !important;
+
     .ant-tree-treenode {
       padding: 12px 0;
       border-radius: 12px;
+      color: @fabrion-white-100;
 
       .ant-tree-node-content-wrapper {
         &.ant-tree-node-selected {
@@ -26,6 +46,7 @@
         }
         .ant-tree-title {
           margin-left: 8px;
+          color: @fabrion-white-100;
         }
 
         &:hover {
@@ -34,7 +55,7 @@
       }
 
       &:hover {
-        background: @primary-25;
+        background: @fabrion-grey-70;
       }
     }
     .ant-tree-node-content-wrapper.ant-tree-node-selected {

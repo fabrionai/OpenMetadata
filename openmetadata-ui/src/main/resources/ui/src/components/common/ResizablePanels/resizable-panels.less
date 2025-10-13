@@ -142,7 +142,7 @@ body.reflex-row-resize {
   bottom: 0;
   right: 0;
   z-index: 10;
-  background-color: #fff;
+  background-color: @fabrion-grey-100;
   overflow: hidden;
   padding-top: 24px;
   display: flex;
@@ -237,7 +237,7 @@ h2.rotated-header {
   left: -24px;
   padding: 4px 8px;
   z-index: 10;
-  background: white !important;
+  background: @fabrion-grey-100 !important;
 
   .collapse-icon {
     vertical-align: middle;
@@ -272,15 +272,18 @@ h2.rotated-header {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: @fabrion-grey-100 !important;
 
   & > .ant-card-head {
     padding: 0px 16px;
     border-bottom: none;
+    background-color: @fabrion-grey-100 !important;
   }
 
   .ant-card-body {
     flex: 1;
     overflow: auto;
+    background-color: @fabrion-grey-100 !important;
   }
 }
 
@@ -309,4 +312,22 @@ h2.rotated-header {
   width: 16px;
   height: 16px;
   transition: transform 0.3s;
+}
+
+// Override white backgrounds in resizable panels
+.content-resizable-panel-container {
+  background-color: transparent !important;
+
+  // Ensure no white Card backgrounds
+  .ant-card {
+    background-color: @fabrion-grey-100 !important;
+  }
+}
+
+.reflex-element {
+  background-color: transparent !important;
+}
+
+.resizable-panels-layout {
+  background-color: transparent !important;
 }

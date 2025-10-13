@@ -32,17 +32,17 @@
   }
 
   &.custom-tab {
-    background: @white;
+    background: @fabrion-grey-100;
     border-radius: @border-rad-sm;
     padding: @padding-sm;
   }
 
   > #KnowledgePanel\.LeftPanel {
-    background: white;
+    background: @fabrion-grey-100;
     padding: @padding-md;
     border-radius: @border-rad-sm;
-    border: 1px solid @grey-15;
-    box-shadow: 0px 0px 0px 4px @grey-100;
+    border: 1px solid @fabrion-grey-70;
+    box-shadow: 0px 0px 0px 4px @fabrion-grey-70;
     box-shadow: 0px 1px 2px 0px #0a0d120d;
   }
 }
@@ -67,4 +67,13 @@
 
 .height-auto {
   height: auto !important;
+}
+
+// Global override for react-grid-item to ensure dark theme
+.react-grid-item {
+  background-color: transparent !important;
+
+  &.static {
+    background-color: @fabrion-grey-100 !important;
+  }
 }
