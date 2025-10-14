@@ -34,15 +34,18 @@
   width: inherit;
 
   &.ant-card {
-    background: @grey-9;
+    padding: 20px;
+    background: black;
     border-radius: 12px;
     margin-bottom: 20px;
-    border: 0.5px solid @grey-15;
+    border: 3px solid @fabrion-grey-70;
   }
 
   .ant-card-body {
     width: inherit;
     padding: 20px;
+    background-color: @fabrion-black !important;
+    border: 0px solid @fabrion-grey-70 !important;
 
     .ant-space-item {
       width: inherit;
@@ -56,13 +59,23 @@
 }
 .activity-feed-card-new-right-panel {
   &.ant-card {
-    border: 1px solid @white;
+    border: 1px solid @fabrion-grey-70;
     .ant-card-body {
-      background-color: @white;
-      border: 1px solid @white;
+      background-color: @fabrion-grey-100;
+      border: 1px solid @fabrion-grey-70;
     }
   }
 }
+
+.activity-feed-card-new.ant-card {
+  background-color: @fabrion-black !important;
+}
+
+.profile-section .profile-section-user-details-card,
+.user-profile-card {
+  background-color: @fabrion-grey-100 !important;
+}
+
 .task-feed-card-v1-new {
   .header-link {
     word-wrap: break-word;
@@ -102,25 +115,25 @@
   padding: 16px;
   margin: 20px 0px 0px 0px;
   background: @grey-9;
-  border: 0.5px solid @grey-15;
+  border: 1px solid @fabrion-grey-70;
   input.ant-input,
   textarea.ant-input {
     border-radius: 20px;
     background-color: @grey-16;
-    border: 1px solid @grey-15;
+    border: 1px solid @fabrion-grey-70;
   }
 }
 
 .activity-feed-reply-button {
   border-radius: 24px;
-  border: 1px solid #d4d4d8;
+  border: 1px solid @fabrion-grey-70;
   color: #52525b;
   font-size: 12px;
 }
 .comments-input-field {
   background-color: @grey-16;
   border-radius: 20px;
-  border: 1px solid @grey-15;
+  border: 1px solid @fabrion-grey-70;
   height: 36px;
   font-size: 12px;
   line-height: 14.52px;

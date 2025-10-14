@@ -20,7 +20,7 @@
   display: flex;
   width: 100%;
   overflow-x: hidden;
-  border: 1px solid @grey-15;
+  border: 1px solid @fabrion-grey-70;
   border-radius: @border-rad-sm;
 
   .custom-menu.ant-menu-root.ant-menu-inline {
@@ -35,11 +35,11 @@
     height: @user-profile-page-panel-height;
     overflow-y: scroll;
     border-radius: 12px;
-    background-color: @white;
+    background-color: @fabrion-grey-100;
     margin-right: 20px;
     display: flex;
     flex-direction: column;
-    border: 1px solid @grey-15;
+    border: 1px solid @fabrion-grey-70;
 
     &.full-width {
       flex: 10;
@@ -53,9 +53,9 @@
     border: none;
     height: @user-profile-page-panel-height;
     overflow-y: scroll;
-    background-color: @white;
+    background-color: @fabrion-grey-100;
     border-radius: 12px;
-    border: 1px solid @grey-15;
+    border: 1px solid @fabrion-grey-70;
 
     .full-width {
       flex: 0;
@@ -69,13 +69,13 @@
       border-radius: 12px;
       padding: 16px;
       margin: 20px 0px 0px 0px;
-      border: 0.5px solid #eaecf5;
+      border: 1px solid @fabrion-grey-70;
       background: @grey-9;
     }
 
     .activity-feed-reply-button {
       border-radius: 24px;
-      border: 1px solid #d4d4d8;
+      border: 1px solid @fabrion-grey-70;
       color: #52525b;
       font-size: 12px;
     }
@@ -83,7 +83,7 @@
     .comments-input-field {
       background-color: @grey-16;
       border-radius: 20px;
-      border: 1px solid #eaecf5;
+      border: 1px solid @fabrion-grey-70;
       height: 36px;
       font-size: 12px;
       line-height: 14.52px;
@@ -105,7 +105,7 @@
   }
 
   .three-panel-layout.right-container {
-    border-left: 1px solid @grey-15;
+    border-left: 1px solid @fabrion-grey-70;
   }
 
   .hide-panel {
@@ -126,7 +126,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: inherit;
-    border: 0.5px solid #eaecf5;
+    border: 1px solid @fabrion-grey-70;
 
     .ant-card-body {
       width: inherit;
@@ -145,10 +145,10 @@
 
   .activity-feed-card-message {
     padding: 20px;
-    background-color: @white;
+    background-color: @fabrion-grey-100;
     width: inherit;
     margin-top: 2px;
-    border: 0.5px solid #eaecf5;
+    border: 1px solid @fabrion-grey-70;
 
     .ant-card-body {
       padding: 0px;
@@ -207,7 +207,7 @@
   }
 
   .activity-feed-card-new-right-panel {
-    background-color: @white;
+    background-color: @fabrion-grey-100;
     border: none;
   }
 
@@ -252,27 +252,27 @@
 
 .activity-feed-editor-container-new {
   background-color: @grey-9;
-  border: 0.5px solid @grey-15;
+  border: 1px solid @fabrion-grey-70;
   border-radius: 10px;
   width: 100%;
 
   .ql-container {
     background-color: @grey-9;
-    border: 1px solid @grey-15;
+    border: 1px solid @fabrion-grey-70;
     width: 100%;
 
     &:focus-within {
-      border: 0.5px solid @grey-15;
+      border: 1px solid @fabrion-grey-70;
     }
   }
 
   .ql-toolbar {
     background-color: @grey-9;
-    border: 1px solid @grey-15;
+    border: 1px solid @fabrion-grey-70;
     flex-wrap: wrap;
 
     &:focus-within {
-      border: 0.5px solid @grey-15;
+      border: 1px solid @fabrion-grey-70;
     }
   }
 
@@ -309,11 +309,11 @@
   font-weight: 600;
   line-height: 20px;
   letter-spacing: 0.03em;
-  color: #181d27;
+  color: @fabrion-white-100;
 }
 
 .activity-feed-user-name.ant-typography a {
-  color: #181d27;
+  color: @fabrion-white-100;
   font-weight: 600;
 }
 
@@ -394,7 +394,7 @@
 }
 
 .task-toggle {
-  background: @white;
+  background: @fabrion-grey-100;
   border-radius: @size-sm;
   padding: 4px;
   border: 1px solid @grey-20;
@@ -527,19 +527,19 @@
 
 .no-description-suggestion-card {
   padding: 20px;
-  border: 0.5px solid #eaecf5;
-  background: @white;
+  border: 1px solid @fabrion-grey-70;
+  background: @fabrion-grey-100;
   border-radius: 12px;
   margin-top: 16px;
 }
 
 .task-toggle.ant-segmented {
-  background-color: @white;
+  background-color: @fabrion-grey-100;
   border-radius: @size-sm;
 
   &:hover {
     .ant-segmented-item:not(.ant-segmented-item-selected) {
-      background-color: @white;
+      background-color: @fabrion-grey-100;
     }
   }
 }
@@ -597,7 +597,7 @@
   background: @grey-16;
   padding: 4px 8px;
   margin-right: @margin-xs;
-  border: 1px solid @grey-15;
+  border: 1px solid @fabrion-grey-70;
 
   .owner-team-icon {
     font-size: 24px !important;
@@ -616,7 +616,7 @@
 .feed-filter-icon {
   cursor: pointer;
   &.ant-btn.ant-btn-default {
-    border: 1px solid @grey-15;
+    border: 1px solid @fabrion-grey-70;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -625,7 +625,7 @@
       stroke: border-color-2;
       border-radius: @size-xs;
       border: 1px solid @grey-100;
-      background: @white;
+      background: @fabrion-grey-100;
     }
     &:not(.disabled):hover {
       border: 1px solid @blue-12;
