@@ -37,7 +37,7 @@
   }
 
   .login-box {
-    background-color: @white;
+    background-color: @fabrion-grey-70;
     border-radius: @border-rad-lg;
     box-shadow: 0px 24px 48px -12px rgba(10, 13, 18, 0.18);
     display: flex;
@@ -98,7 +98,7 @@
       padding: @size-sm @size-md;
       border-radius: @border-rad-xs;
       border: 1px solid @grey-22;
-      background-color: @grey-23 !important;
+      background-color: @fabrion-black !important;
     }
 
     .input-field::placeholder {
@@ -108,7 +108,25 @@
     #password,
     #confirmPassword,
     .input-field:focus {
-      background-color: @grey-23;
+      background-color: @fabrion-black !important;
+    }
+
+    // Override global input styles for login page
+    .login-form-container {
+      input.ant-input,
+      textarea.ant-input,
+      .ant-input-number,
+      .ant-input-search {
+        background-color: @fabrion-black !important;
+        color: @fabrion-white-100 !important;
+        border-color: @grey-22 !important;
+
+        &:focus,
+        &.ant-input-focused {
+          background-color: @fabrion-black !important;
+          border-color: @primary-color !important;
+        }
+      }
     }
 
     .ant-btn-link.link-btn {
