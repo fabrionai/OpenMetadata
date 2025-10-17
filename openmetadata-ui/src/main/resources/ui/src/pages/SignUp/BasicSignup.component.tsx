@@ -75,13 +75,16 @@ const BasicSignUp = () => {
 
   return (
     <CarouselLayout
+      hideCarousel
       carouselClassName="signup-page"
       pageTitle={t('label.sign-up')}>
       <div
         className="login-form-container signup-page"
         data-testid="signin-page">
-        <div className="login-box">
-          <BrandImage isMonoGram height="auto" width={50} />
+        <div
+          className="login-box"
+          style={{ justifyContent: 'flex-start', paddingTop: '60px' }}>
+          <BrandImage className="mb-10" height="auto" width={240} />
           <Typography.Title className="header-text display-sm" level={3}>
             {t('label.welcome-to')} {brandName}
           </Typography.Title>

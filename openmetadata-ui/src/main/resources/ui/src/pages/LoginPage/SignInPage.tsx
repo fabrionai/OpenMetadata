@@ -167,13 +167,13 @@ const SignInPage = () => {
   };
 
   return (
-    <CarouselLayout pageTitle={t('label.sign-in')}>
+    <CarouselLayout hideCarousel pageTitle={t('label.sign-in')}>
       <div className="login-form-container" data-testid="login-form-container">
         <div
           className={classNames('login-box', {
             'sso-container': !isAuthProviderBasic,
           })}>
-          <BrandImage isMonoGram height="auto" width={50} />
+          <BrandImage height="auto" width={240} />
           <Typography.Title className="header-text display-sm" level={3}>
             {t('label.welcome-to')} {brandName}
           </Typography.Title>

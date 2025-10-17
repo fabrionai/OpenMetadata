@@ -22,10 +22,12 @@ export const CarouselLayout = ({
   pageTitle,
   children,
   carouselClassName,
+  hideCarousel = false,
 }: {
   pageTitle: string;
   children: ReactNode;
   carouselClassName?: string;
+  hideCarousel?: boolean;
 }) => {
   const { xl } = Grid.useBreakpoint();
 
@@ -34,10 +36,12 @@ export const CarouselLayout = ({
       <DocumentTitle title={pageTitle} />
       <Content className="p-md">
         <Row data-testid="signin-page" gutter={[48, 0]} wrap={false}>
-          <Col className="carousel-left-side-container" span={xl ? 10 : 24}>
+          <Col
+            className="carousel-left-side-container"
+            span={hideCarousel ? 24 : xl ? 10 : 24}>
             {children}
           </Col>
-          {xl && (
+          {xl && !hideCarousel && (
             <Col span={14}>
               <div
                 className={classNames(
